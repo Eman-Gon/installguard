@@ -1,0 +1,12 @@
+.env
+node_modules/
+.daytona/
+.env.local
+
+service/data/
+gateway/data/
+*.sqlite
+*.sqlite-*
+*.ledger.json
+
+.installguard/

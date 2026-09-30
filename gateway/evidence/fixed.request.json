@@ -1,0 +1,21 @@
+{
+  "requestId": "paid-csv-fixed-001",
+  "package": {
+    "ecosystem": "npm",
+    "name": "csv-parse",
+    "version": "5.6.0"
+  },
+  "lockfileDigest": "sha256:e4a834ad16825f2d545780af6326186997b4fc6ca1bd97a6e5c1ebbdbe09ddc2",
+  "artifact": {
+    "reference": "csv-fixed",
+    "digest": "sha256:fe127180e8f60c4bad68a623269c063e386366c04c368a4c324c0e60125b833a"
+  },
+  "target": {
+    "os": "linux",
+    "arch": "arm64",
+    "runtime": "node",
+    "version": "22.11.0"
+  },
+  "goal": "Reject malformed CSV rows with missing required name or email fields.",
+  "testProfile": "csv-validation-v1"
+}

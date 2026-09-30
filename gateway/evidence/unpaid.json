@@ -1,0 +1,1 @@
+{"endpoint":{"method":"POST","path":"investigations"},"error":"payment_required","message":"This endpoint requires payment.","payment":{"schemes":["mpp/charge"]},"pricing":{"dimensions":[{"direction":"usage","price_usd":0.01,"scale":1,"unit":"requests"}]}}

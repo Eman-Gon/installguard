@@ -1,0 +1,92 @@
+{
+  "mode": "deterministic",
+  "narrative": null,
+  "osv": {
+    "status": "unavailable",
+    "reason": "OSV disabled for offline test; no vulnerability conclusion."
+  },
+  "execution": {
+    "startedAt": "2026-09-30T20:01:58.825Z",
+    "finishedAt": "2026-09-30T20:01:59.173Z",
+    "artifactDigest": "843345a590ddf0d9444d60eb681e5e15f35a9b656ae67274872b043df5687019",
+    "lockfileDigest": "e4a834ad16825f2d545780af6326186997b4fc6ca1bd97a6e5c1ebbdbe09ddc2",
+    "environment": {
+      "os": "darwin",
+      "architecture": "arm64",
+      "runtime": "node-22.11.0",
+      "isolated": false,
+      "mode": "local-development"
+    },
+    "install": {
+      "exitCode": 0,
+      "signal": null,
+      "logs": "\nadded 1 package in 181ms\n",
+      "timedOut": false,
+      "outputLimited": false
+    },
+    "test": {
+      "exitCode": 1,
+      "signal": null,
+      "logs": "TAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.44325\n  ...\n# Subtest: rejects a row missing a required email\nnot ok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.852292\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:7:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:8:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)\n  ...\n# Subtest: rejects a missing required header\nnot ok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.197458\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:10:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:11:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:633:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.527917\n",
+      "timedOut": false,
+      "outputLimited": false
+    },
+    "outcome": "failed",
+    "exitCode": 1,
+    "logs": "\nadded 1 package in 181ms\n\nTAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.44325\n  ...\n# Subtest: rejects a row missing a required email\nnot ok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.852292\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:7:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:8:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)\n  ...\n# Subtest: rejects a missing required header\nnot ok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.197458\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:10:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:11:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:633:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.527917\n",
+    "limitations": [
+      "Local development execution is not isolated and does not verify the requested Linux environment."
+    ]
+  },
+  "evidence": [
+    {
+      "tool": "query_osv",
+      "args": {},
+      "result": {
+        "status": "unavailable",
+        "reason": "OSV disabled for offline test; no vulnerability conclusion."
+      }
+    },
+    {
+      "tool": "run_tests",
+      "args": {},
+      "result": {
+        "startedAt": "2026-09-30T20:01:58.825Z",
+        "finishedAt": "2026-09-30T20:01:59.173Z",
+        "artifactDigest": "843345a590ddf0d9444d60eb681e5e15f35a9b656ae67274872b043df5687019",
+        "lockfileDigest": "e4a834ad16825f2d545780af6326186997b4fc6ca1bd97a6e5c1ebbdbe09ddc2",
+        "environment": {
+          "os": "darwin",
+          "architecture": "arm64",
+          "runtime": "node-22.11.0",
+          "isolated": false,
+          "mode": "local-development"
+        },
+        "install": {
+          "exitCode": 0,
+          "signal": null,
+          "logs": "\nadded 1 package in 181ms\n",
+          "timedOut": false,
+          "outputLimited": false
+        },
+        "test": {
+          "exitCode": 1,
+          "signal": null,
+          "logs": "TAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.44325\n  ...\n# Subtest: rejects a row missing a required email\nnot ok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.852292\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:7:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:8:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)\n  ...\n# Subtest: rejects a missing required header\nnot ok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.197458\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:10:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:11:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:633:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.527917\n",
+          "timedOut": false,
+          "outputLimited": false
+        },
+        "outcome": "failed",
+        "exitCode": 1,
+        "logs": "\nadded 1 package in 181ms\n\nTAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.44325\n  ...\n# Subtest: rejects a row missing a required email\nnot ok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.852292\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:7:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:8:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)\n  ...\n# Subtest: rejects a missing required header\nnot ok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.197458\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:10:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:11:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:633:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.527917\n",
+        "limitations": [
+          "Local development execution is not isolated and does not verify the requested Linux environment."
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Nebius not executed: credentials/model unavailable or offline mode selected. Deterministic checks only.",
+    "OSV unavailable; known-vulnerability status is inconclusive."
+  ]
+}

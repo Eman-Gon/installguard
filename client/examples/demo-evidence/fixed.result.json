@@ -1,0 +1,41 @@
+{
+  "mode": "http",
+  "payment": {
+    "state": "not_requested",
+    "executed": false
+  },
+  "result": {
+    "requestId": "person1-verification",
+    "requestDigest": "sha256:09d38c741db3f0a4884c02b815e0d7006d6eb10e76381c0a92fe86710fee9e80",
+    "artifactDigest": "sha256:fe127180e8f60c4bad68a623269c063e386366c04c368a4c324c0e60125b833a",
+    "lockfileDigest": "sha256:e4a834ad16825f2d545780af6326186997b4fc6ca1bd97a6e5c1ebbdbe09ddc2",
+    "target": {
+      "os": "linux",
+      "arch": "x64",
+      "runtime": "node",
+      "version": "22.11.0"
+    },
+    "executionId": "e25a4c63-5a80-4b08-aa8f-64b4f8cc2aac",
+    "execution": "completed",
+    "finding": "inconclusive",
+    "installationPolicy": "review",
+    "exitCode": 0,
+    "logs": [
+      "\nadded 1 package in 179ms\n\nTAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.39025\n  ...\n# Subtest: rejects a row missing a required email\nok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.363125\n  ...\n# Subtest: rejects a missing required header\nok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.5515\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 53.90875\n"
+    ],
+    "evidence": [
+      {
+        "reference": "evidence/e25a4c63-5a80-4b08-aa8f-64b4f8cc2aac.json",
+        "digest": "sha256:7a019ef18a4f6ce9bb881f4062250345125d922079b29a852520e09260b4bf3e"
+      }
+    ],
+    "limitations": [
+      "Nebius not executed: credentials/model unavailable or offline mode selected. Deterministic checks only.",
+      "OSV unavailable; known-vulnerability status is inconclusive.",
+      "Local development execution is not isolated and does not verify the requested Linux environment.",
+      "Requested isolated target environment was not verified."
+    ],
+    "recommendation": "Controlled functional tests passed. Review environment and security limitations before installing.",
+    "fixture": true
+  }
+}

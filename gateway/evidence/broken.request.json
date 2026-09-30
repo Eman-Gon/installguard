@@ -1,0 +1,21 @@
+{
+  "requestId": "paid-csv-broken-001",
+  "package": {
+    "ecosystem": "npm",
+    "name": "csv-parse",
+    "version": "5.6.0"
+  },
+  "lockfileDigest": "sha256:e4a834ad16825f2d545780af6326186997b4fc6ca1bd97a6e5c1ebbdbe09ddc2",
+  "artifact": {
+    "reference": "csv-broken",
+    "digest": "sha256:843345a590ddf0d9444d60eb681e5e15f35a9b656ae67274872b043df5687019"
+  },
+  "target": {
+    "os": "linux",
+    "arch": "arm64",
+    "runtime": "node",
+    "version": "22.11.0"
+  },
+  "goal": "Reject malformed CSV rows with missing required name or email fields.",
+  "testProfile": "csv-validation-v1"
+}

@@ -1,0 +1,41 @@
+{
+  "mode": "http",
+  "payment": {
+    "state": "not_requested",
+    "executed": false
+  },
+  "result": {
+    "requestId": "person1-failure",
+    "requestDigest": "sha256:905c4f73b78a031ee7b9baf7252bea5a253cd1599a94c3aa5b2513fc2fcb56ed",
+    "artifactDigest": "sha256:843345a590ddf0d9444d60eb681e5e15f35a9b656ae67274872b043df5687019",
+    "lockfileDigest": "sha256:e4a834ad16825f2d545780af6326186997b4fc6ca1bd97a6e5c1ebbdbe09ddc2",
+    "target": {
+      "os": "linux",
+      "arch": "x64",
+      "runtime": "node",
+      "version": "22.11.0"
+    },
+    "executionId": "9c38e79c-756d-4b10-96a9-ebe937698c5e",
+    "execution": "completed",
+    "finding": "reproduced",
+    "installationPolicy": "block",
+    "exitCode": 1,
+    "logs": [
+      "\nadded 1 package in 181ms\n\nTAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.44325\n  ...\n# Subtest: rejects a row missing a required email\nnot ok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.852292\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:7:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:8:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)\n  ...\n# Subtest: rejects a missing required header\nnot ok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.197458\n  location: '/private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:10:1'\n  failureType: 'testCodeFailure'\n  error: 'Missing expected exception.'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n  operator: 'throws'\n  stack: |-\n    TestContext.<anonymous> (file:///private/var/folders/6w/y3b646zs2cjbz43z797b2kjc0000gp/T/installguard-worker-tMCS64/integration.test.mjs:11:10)\n    Test.runInAsyncScope (node:async_hooks:211:14)\n    Test.run (node:internal/test_runner/test:934:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:633:18)\n    Test.postRun (node:internal/test_runner/test:1045:19)\n    Test.run (node:internal/test_runner/test:973:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:633:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.527917\n"
+    ],
+    "evidence": [
+      {
+        "reference": "evidence/9c38e79c-756d-4b10-96a9-ebe937698c5e.json",
+        "digest": "sha256:4e5eb7c1d25ca9500ca5557bcfbd59a4361478e4eda7e7dbd9449aff725c8730"
+      }
+    ],
+    "limitations": [
+      "Nebius not executed: credentials/model unavailable or offline mode selected. Deterministic checks only.",
+      "OSV unavailable; known-vulnerability status is inconclusive.",
+      "Local development execution is not isolated and does not verify the requested Linux environment.",
+      "Requested isolated target environment was not verified."
+    ],
+    "recommendation": "Required-field validation failed. Repair CSV integration and submit the corrected artifact with a new request ID.",
+    "fixture": true
+  }
+}

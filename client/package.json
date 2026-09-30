@@ -1,0 +1,21 @@
+{
+  "name": "@installguard/client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "node --experimental-sqlite --import tsx --test test/*.test.ts",
+    "cli": "node --experimental-sqlite --import tsx src/cli.ts",
+    "demo": "node --experimental-sqlite --import tsx src/demo.ts"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "zod-to-json-schema": "^3.25.2"
+  }
+}

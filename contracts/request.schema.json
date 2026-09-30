@@ -1,0 +1,135 @@
+{
+  "$ref": "#/definitions/request",
+  "definitions": {
+    "request": {
+      "type": "object",
+      "properties": {
+        "requestId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]{1,100}$"
+        },
+        "package": {
+          "type": "object",
+          "properties": {
+            "ecosystem": {
+              "type": "string",
+              "const": "npm"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "string",
+              "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?$"
+            }
+          },
+          "required": [
+            "ecosystem",
+            "name",
+            "version"
+          ],
+          "additionalProperties": false
+        },
+        "lockfileDigest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "artifact": {
+          "type": "object",
+          "properties": {
+            "digest": {
+              "$ref": "#/definitions/request/properties/lockfileDigest"
+            },
+            "reference": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "digest",
+            "reference"
+          ],
+          "additionalProperties": false
+        },
+        "target": {
+          "type": "object",
+          "properties": {
+            "os": {
+              "type": "string",
+              "const": "linux"
+            },
+            "arch": {
+              "type": "string",
+              "enum": [
+                "x64",
+                "arm64"
+              ]
+            },
+            "runtime": {
+              "type": "string",
+              "const": "node"
+            },
+            "version": {
+              "type": "string",
+              "pattern": "^22\\.\\d+\\.\\d+$"
+            }
+          },
+          "required": [
+            "os",
+            "arch",
+            "runtime",
+            "version"
+          ],
+          "additionalProperties": false
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "testProfile": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "projectId": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "moduleType": {
+              "type": "string",
+              "enum": [
+                "module",
+                "commonjs"
+              ]
+            },
+            "nodeMajor": {
+              "type": "number",
+              "const": 22
+            }
+          },
+          "required": [
+            "projectId",
+            "moduleType",
+            "nodeMajor"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "requestId",
+        "package",
+        "lockfileDigest",
+        "artifact",
+        "target",
+        "goal",
+        "testProfile"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

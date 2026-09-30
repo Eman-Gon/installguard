@@ -1,0 +1,311 @@
+{
+  "$ref": "#/definitions/result",
+  "definitions": {
+    "result": {
+      "type": "object",
+      "properties": {
+        "requestId": {
+          "type": "string"
+        },
+        "requestDigest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "artifactDigest": {
+          "$ref": "#/definitions/result/properties/requestDigest"
+        },
+        "lockfileDigest": {
+          "$ref": "#/definitions/result/properties/requestDigest"
+        },
+        "target": {
+          "type": "object",
+          "properties": {
+            "os": {
+              "type": "string",
+              "const": "linux"
+            },
+            "arch": {
+              "type": "string",
+              "enum": [
+                "x64",
+                "arm64"
+              ]
+            },
+            "runtime": {
+              "type": "string",
+              "const": "node"
+            },
+            "version": {
+              "type": "string",
+              "pattern": "^22\\.\\d+\\.\\d+$"
+            }
+          },
+          "required": [
+            "os",
+            "arch",
+            "runtime",
+            "version"
+          ],
+          "additionalProperties": false
+        },
+        "executionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "execution": {
+          "type": "string",
+          "enum": [
+            "not_started",
+            "queued",
+            "running",
+            "completed",
+            "failed",
+            "unknown"
+          ]
+        },
+        "finding": {
+          "type": "string",
+          "enum": [
+            "reproduced",
+            "not_reproduced_by_this_test",
+            "inconclusive",
+            "not_applicable"
+          ]
+        },
+        "installationPolicy": {
+          "type": "string",
+          "enum": [
+            "allow",
+            "block",
+            "review"
+          ]
+        },
+        "exitCode": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "logs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "reference": {
+                "type": "string"
+              },
+              "digest": {
+                "$ref": "#/definitions/result/properties/requestDigest"
+              }
+            },
+            "required": [
+              "reference",
+              "digest"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recommendation": {
+          "type": "string"
+        },
+        "assessment": {
+          "type": "object",
+          "properties": {
+            "functional": {
+              "type": "string",
+              "enum": [
+                "passed",
+                "failed",
+                "not_completed"
+              ]
+            },
+            "vulnerabilities": {
+              "type": "string",
+              "enum": [
+                "unknown",
+                "reported",
+                "none_reported"
+              ]
+            },
+            "vulnerabilityIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "environmentVerified": {
+              "type": "boolean"
+            },
+            "failureKind": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "installation",
+                    "timeout",
+                    "functional",
+                    "infrastructure"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "functional",
+            "vulnerabilities",
+            "vulnerabilityIds",
+            "environmentVerified",
+            "failureKind"
+          ],
+          "additionalProperties": false
+        },
+        "history": {
+          "type": "object",
+          "properties": {
+            "advisoryOnly": {
+              "type": "boolean",
+              "const": true
+            },
+            "signatureVersion": {
+              "type": "string"
+            },
+            "unavailable": {
+              "type": "boolean"
+            },
+            "patterns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "outcome": {
+                    "type": "string"
+                  },
+                  "failure_signature": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "occurrences": {
+                    "type": "integer"
+                  },
+                  "artifacts": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "outcome",
+                  "failure_signature",
+                  "occurrences",
+                  "artifacts"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "advisoryOnly"
+          ],
+          "additionalProperties": false
+        },
+        "dependencyChecks": {
+          "type": "object",
+          "properties": {
+            "installation": {
+              "type": "string",
+              "enum": [
+                "passed",
+                "failed",
+                "unknown"
+              ]
+            },
+            "compatibility": {
+              "type": "string",
+              "enum": [
+                "passed",
+                "failed",
+                "unknown"
+              ]
+            },
+            "vulnerabilities": {
+              "type": "string",
+              "enum": [
+                "unknown",
+                "reported",
+                "none_reported"
+              ]
+            },
+            "scope": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "unavailable": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "recommendations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "installation",
+            "compatibility",
+            "vulnerabilities",
+            "scope",
+            "unavailable",
+            "recommendations"
+          ],
+          "additionalProperties": false
+        },
+        "fixture": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "requestId",
+        "requestDigest",
+        "artifactDigest",
+        "lockfileDigest",
+        "target",
+        "executionId",
+        "execution",
+        "finding",
+        "installationPolicy",
+        "exitCode",
+        "logs",
+        "evidence",
+        "limitations",
+        "recommendation",
+        "fixture"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

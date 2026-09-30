@@ -1,0 +1,11 @@
+{
+  "authorizationId": "sandbox-demo-replace-with-user-authorization",
+  "providers": ["http://127.0.0.1:4312"],
+  "network": "localnet",
+  "asset": "USDC",
+  "paymentType": "fixed",
+  "perCallLimit": 10000,
+  "totalLimit": 20000,
+  "expiresAt": "2026-10-01T07:00:00Z",
+  "testProfiles": ["csv-validation-v1"]
+}

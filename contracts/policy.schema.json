@@ -1,0 +1,67 @@
+{
+  "$ref": "#/definitions/policy",
+  "definitions": {
+    "policy": {
+      "type": "object",
+      "properties": {
+        "authorizationId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "providers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 1
+        },
+        "network": {
+          "type": "string",
+          "const": "localnet"
+        },
+        "asset": {
+          "type": "string",
+          "const": "USDC"
+        },
+        "paymentType": {
+          "type": "string",
+          "const": "fixed"
+        },
+        "perCallLimit": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "totalLimit": {
+          "$ref": "#/definitions/policy/properties/perCallLimit"
+        },
+        "expiresAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "testProfiles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "authorizationId",
+        "providers",
+        "network",
+        "asset",
+        "paymentType",
+        "perCallLimit",
+        "totalLimit",
+        "expiresAt",
+        "testProfiles"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@installguard/agent-interface",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.11.0" },
+  "scripts": {
+    "test": "node --experimental-sqlite --test test/*.test.mjs",
+    "mcp": "node --experimental-sqlite launch.mjs mcp",
+    "cli": "node --experimental-sqlite launch.mjs"
+  },
+  "dependencies": { "@modelcontextprotocol/sdk": "1.31.0" }
+}

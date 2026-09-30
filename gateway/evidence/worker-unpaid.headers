@@ -1,0 +1,8 @@
+HTTP/1.1 402 Payment Required
+content-type: application/json
+www-authenticate: Payment id="ZjpnQHfnUSPnk0QfyK_G4kmmFV_hZB5pgiXRHhZ65E4", realm="App Id - #62931145", method="solana", intent="charge", request="eyJhbW91bnQiOiIxMDAwMCIsImN1cnJlbmN5IjoiRVBqRldkZDVBdWZxU1NxZU0ycU4xeHp5YmFwQzhHNHdFR0drWnd5VER0MXYiLCJkZXNjcmlwdGlvbiI6Ik9uZSBjb250cm9sbGVkIHRlc3Qgam9iIiwiZXh0ZXJuYWxJZCI6ImNvbnRyb2xsZWQtdGVzdCM4YjQiLCJtZXRob2REZXRhaWxzIjp7ImRlY2ltYWxzIjo2LCJmZWVQYXllciI6dHJ1ZSwiZmVlUGF5ZXJLZXkiOiI3UEZEZlVyaFF3am5VRzVZa2VtNnV6VXdxemFZakJFR0diTlhuMUp3TW1GMSIsIm5ldHdvcmsiOiJsb2NhbG5ldCIsInJlY2VudEJsb2NraGFzaCI6IlNVUkZORVR4U0FGRUhBU0h4eHh4eHh4eHh4eHh4eHh4eHh4MWFjZjc4OWQiLCJ0b2tlblByb2dyYW0iOiJUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIn0sInJlY2lwaWVudCI6IjdQRkRmVXJoUXdqblVHNVlrZW02dXpVd3F6YVlqQkVHR2JOWG4xSndNbUYxIn0", description="One controlled test job", expires="2026-09-30T20:07:20.003772Z"
+Date: Wed, 30 Sep 2026 20:02:20 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+

@@ -1,0 +1,31 @@
+name: installguard
+subdomain: installguard
+title: InstallGuard sandbox execution
+description: One controlled dependency test run
+category: compute
+version: v1
+routing:
+  type: proxy
+  url: http://127.0.0.1:4313/
+  auth:
+    method: header
+    key: authorization
+    prefix: 'Bearer '
+    value_from_env: INSTALLGUARD_GATE_TOKEN
+operator:
+  currencies:
+    usd: ['USDC']
+  network: localnet
+  fee_payer: true
+endpoints:
+  - method: POST
+    path: investigations
+    resource: controlled-test
+    description: One controlled test job
+    metering:
+      dimensions:
+        - direction: usage
+          unit: requests
+          scale: 1
+          tiers:
+            - price_usd: 0.01

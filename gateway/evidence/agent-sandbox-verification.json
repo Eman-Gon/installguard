@@ -1,0 +1,69 @@
+{
+  "verifiedAt": "2026-09-30T20:43:42.087Z",
+  "paymentNetwork": "localnet",
+  "workerMode": "local-development",
+  "mainnetFundsSpent": false,
+  "results": [
+    {
+      "artifact": "csv-broken",
+      "requestId": "smoke-9c551b40-4632-4d3b-be83-3f96b71feffb",
+      "requestDigest": "sha256:a0599b624e22659b7da4af97089e3fca7cc7d622ba00998f6714fdaa5ba09aa7",
+      "artifactDigest": "sha256:843345a590ddf0d9444d60eb681e5e15f35a9b656ae67274872b043df5687019",
+      "executionId": "764219d6-f3ad-4977-9c29-9055ac7f03f7",
+      "receipt": {
+        "challengeId": "D5KbcHK5pk_73XzdpCvnYeO75RVDxrhy4F_pL7hMRJc",
+        "method": "solana",
+        "reference": "rdFiEANL9H4rxifxqPJznTmRVBXnvd54W9DhXJdKEk5nXTtWVmhqG7dLrgRbag9N2TAK9Cjkrj5GhRvcm3fmNvJ",
+        "status": "success",
+        "timestamp": "2026-09-30T20:43:37.218459Z"
+      },
+      "payment": "confirmed",
+      "execution": "completed",
+      "exitCode": 1,
+      "policy": "block",
+      "replaySameExecution": true,
+      "assessment": {
+        "functional": "failed",
+        "vulnerabilities": "unknown",
+        "vulnerabilityIds": [],
+        "environmentVerified": false,
+        "failureKind": "functional"
+      }
+    },
+    {
+      "artifact": "csv-fixed",
+      "requestId": "smoke-7db9b3f7-1447-4dd0-af67-cc15f1f12c8a",
+      "requestDigest": "sha256:fb94b9cd62e5fd203c28dcca0984be502d65d60ffaf13f94e433195d6dbae70c",
+      "artifactDigest": "sha256:fe127180e8f60c4bad68a623269c063e386366c04c368a4c324c0e60125b833a",
+      "executionId": "7a56fa8e-c839-4863-a777-619bd089eeb2",
+      "receipt": {
+        "challengeId": "iNJF1c_dY35pgWp793RQBzodGB-B0Cuxr9WqbtJFhqY",
+        "method": "solana",
+        "reference": "5e8nkjiZMN5Qo3MfjeV9B4NYsrua2ecwfmwM8NK2wgLKqTB1yGjPuY54wGykr9dK6VLu5SsHgH8Mun27U4KDxUiS",
+        "status": "success",
+        "timestamp": "2026-09-30T20:43:41.053943Z"
+      },
+      "payment": "confirmed",
+      "execution": "completed",
+      "exitCode": 0,
+      "policy": "review",
+      "replaySameExecution": true,
+      "assessment": {
+        "functional": "passed",
+        "vulnerabilities": "unknown",
+        "vulnerabilityIds": [],
+        "environmentVerified": false,
+        "failureKind": null
+      }
+    }
+  ],
+  "regressionTests": {
+    "passed": 48,
+    "failed": 0,
+    "typescriptBuild": "passed"
+  },
+  "isolationVerification": {
+    "status": "unverified",
+    "reason": "Local Docker Desktop reports it is unable to start. Smoke execution used native local-development mode."
+  }
+}

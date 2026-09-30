@@ -1,0 +1,92 @@
+{
+  "mode": "deterministic",
+  "narrative": null,
+  "osv": {
+    "status": "unavailable",
+    "reason": "OSV disabled for offline test; no vulnerability conclusion."
+  },
+  "execution": {
+    "startedAt": "2026-09-30T20:02:07.485Z",
+    "finishedAt": "2026-09-30T20:02:07.837Z",
+    "artifactDigest": "fe127180e8f60c4bad68a623269c063e386366c04c368a4c324c0e60125b833a",
+    "lockfileDigest": "e4a834ad16825f2d545780af6326186997b4fc6ca1bd97a6e5c1ebbdbe09ddc2",
+    "environment": {
+      "os": "darwin",
+      "architecture": "arm64",
+      "runtime": "node-22.11.0",
+      "isolated": false,
+      "mode": "local-development"
+    },
+    "install": {
+      "exitCode": 0,
+      "signal": null,
+      "logs": "\nadded 1 package in 179ms\n",
+      "timedOut": false,
+      "outputLimited": false
+    },
+    "test": {
+      "exitCode": 0,
+      "signal": null,
+      "logs": "TAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.39025\n  ...\n# Subtest: rejects a row missing a required email\nok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.363125\n  ...\n# Subtest: rejects a missing required header\nok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.5515\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 53.90875\n",
+      "timedOut": false,
+      "outputLimited": false
+    },
+    "outcome": "passed",
+    "exitCode": 0,
+    "logs": "\nadded 1 package in 179ms\n\nTAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.39025\n  ...\n# Subtest: rejects a row missing a required email\nok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.363125\n  ...\n# Subtest: rejects a missing required header\nok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.5515\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 53.90875\n",
+    "limitations": [
+      "Local development execution is not isolated and does not verify the requested Linux environment."
+    ]
+  },
+  "evidence": [
+    {
+      "tool": "query_osv",
+      "args": {},
+      "result": {
+        "status": "unavailable",
+        "reason": "OSV disabled for offline test; no vulnerability conclusion."
+      }
+    },
+    {
+      "tool": "run_tests",
+      "args": {},
+      "result": {
+        "startedAt": "2026-09-30T20:02:07.485Z",
+        "finishedAt": "2026-09-30T20:02:07.837Z",
+        "artifactDigest": "fe127180e8f60c4bad68a623269c063e386366c04c368a4c324c0e60125b833a",
+        "lockfileDigest": "e4a834ad16825f2d545780af6326186997b4fc6ca1bd97a6e5c1ebbdbe09ddc2",
+        "environment": {
+          "os": "darwin",
+          "architecture": "arm64",
+          "runtime": "node-22.11.0",
+          "isolated": false,
+          "mode": "local-development"
+        },
+        "install": {
+          "exitCode": 0,
+          "signal": null,
+          "logs": "\nadded 1 package in 179ms\n",
+          "timedOut": false,
+          "outputLimited": false
+        },
+        "test": {
+          "exitCode": 0,
+          "signal": null,
+          "logs": "TAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.39025\n  ...\n# Subtest: rejects a row missing a required email\nok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.363125\n  ...\n# Subtest: rejects a missing required header\nok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.5515\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 53.90875\n",
+          "timedOut": false,
+          "outputLimited": false
+        },
+        "outcome": "passed",
+        "exitCode": 0,
+        "logs": "\nadded 1 package in 179ms\n\nTAP version 13\n# Subtest: imports a valid CSV row\nok 1 - imports a valid CSV row\n  ---\n  duration_ms: 2.39025\n  ...\n# Subtest: rejects a row missing a required email\nok 2 - rejects a row missing a required email\n  ---\n  duration_ms: 0.363125\n  ...\n# Subtest: rejects a missing required header\nok 3 - rejects a missing required header\n  ---\n  duration_ms: 0.5515\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 53.90875\n",
+        "limitations": [
+          "Local development execution is not isolated and does not verify the requested Linux environment."
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Nebius not executed: credentials/model unavailable or offline mode selected. Deterministic checks only.",
+    "OSV unavailable; known-vulnerability status is inconclusive."
+  ]
+}

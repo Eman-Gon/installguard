@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "pay": {
+      "source": "solana-foundation/pay",
+      "sourceType": "github",
+      "skillPath": "skills/pay/SKILL.md",
+      "computedHash": "2ac5f21e22fa042171a63603aaf8ced54f1594aa04bbc2c15846410513ec7f1e"
+    }
+  }
+}

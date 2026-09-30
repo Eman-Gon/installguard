@@ -1,0 +1,11 @@
+{
+  "csv-validation-v1": {
+    "status": "reviewed",
+    "package": { "ecosystem": "npm", "name": "csv-parse", "version": "5.6.0" },
+    "target": { "os": "linux", "runtime": "node", "version": "22.11.0", "architectures": ["x64", "arm64"] },
+    "artifacts": ["csv-broken", "csv-fixed"],
+    "testFile": "integration.test.mjs",
+    "cacheFixture": "csv-broken",
+    "image": "installguard-worker:node22.11.0"
+  }
+}
